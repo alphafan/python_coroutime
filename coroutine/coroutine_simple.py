@@ -18,6 +18,7 @@ def simple_coroutine():
        File "<stdin>", line 1, in <module>
      TypeError: can't send non-None value to a just-started generator
     """
+
     print('Coroutine started')
     x = yield                           # Wait for a value from send()
     print('-> coroutine recieved:', x)
@@ -45,6 +46,7 @@ def simple_coroutine2(a):
     >>> getgeneratorstate(my_coro2)
     'GEN_CLOSED'
     """
+
     print('-> Started: a =', a)
     b = yield a
     print('-> Received: b =', b)

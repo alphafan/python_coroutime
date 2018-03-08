@@ -10,6 +10,7 @@ def averager():
     >>> coro_avg.send(5)
     15.0
     """
+
     total = 0.0
     count = 0
     average = None
