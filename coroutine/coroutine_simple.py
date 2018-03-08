@@ -8,7 +8,7 @@ def simple_coroutine():
     -> Coroutine started
     >>> my_coro.send(42)
     -> Coroutine received: 42
-    Traceback (most recent call last): # ➏
+    Traceback (most recent call last):
         ...
     StopIteration
 
@@ -19,9 +19,8 @@ def simple_coroutine():
      TypeError: can't send non-None value to a just-started generator
     """
     print('Coroutine started')
-    while True:
-        x = yield                           # Wait for a value from send()
-        print('-> coroutine recieved:', x)
+    x = yield                           # Wait for a value from send()
+    print('-> coroutine recieved:', x)
 
 
 def simple_coroutine2(a):
